@@ -29,11 +29,11 @@ def TowerOfHanoi(n, from_rod, to_rod, aux_rod):
     # Counter for moves
     global MoveCount
     MoveCount += 1 
-    # 1st recursive call: moving the n-1 disk from from_rod aux using to_rod
+    # 1st recursive call: moving the n-1 disk from from_rod to aux using to_rod
     TowerOfHanoi(n-1, from_rod, aux_rod, to_rod) 
     # Moving the disk from from_rod to to_rod
     print("Disk", n, "moves from rod", from_rod, "to rod", to_rod) 
-    # 2nd recursive call: moving remaining disk from aux to to_rod using from_rod.
+    # 2nd recursive call: moving disk from aux to to_rod using from_rod.
     TowerOfHanoi(n-1, aux_rod, to_rod, from_rod)
 
 
