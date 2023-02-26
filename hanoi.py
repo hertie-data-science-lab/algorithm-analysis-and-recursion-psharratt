@@ -6,9 +6,9 @@ Created on Mon Feb 20 08:24:20 2023
 
 Assumptions: 
 
-- Base case/simplest case: moving one disk from source rod (from_rod) to destination rod (to_rod), i.e. a tower of one disk requiring only one move.
+- Base case/simplest case: moving one disk from source rod (from_rod) to destination rod (to_rod), i.e. (a tower of) one disk requiring only one move.
 
-- To move n disks, function requires three steps, two of which are recursive calls:
+- To move n disks, the function requires three steps, two of which are recursive calls:
     
         1. move n - 1 from from_rod to aux_rod
         2. move n from from_rod to to_rod
@@ -16,7 +16,11 @@ Assumptions:
         
 Notes: 
 
-- The function has 2^n-1 time complexity. We tested this with the move counter.
+- The time complexity of the TowerOfHanoi is O(2^n). 
+
+- This is because the algorithm solves two subproblems of size n - 1 for each move.
+
+- The function takes 2^n-1 moves to complete. We tracked this with the move counter.
 
 """
 # Move counter init for tracking complexity
